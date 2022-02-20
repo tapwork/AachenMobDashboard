@@ -28,6 +28,7 @@ class ChargeStationsAPI: ObservableObject {
         let (data, _) = try await session.data(from: Self.url)
         var resultError: Error
         do {
+            decoder.dateDecodingStrategy = .iso8601
             let result = try decoder.decode(T.self, from: data)
             return result
         } catch {

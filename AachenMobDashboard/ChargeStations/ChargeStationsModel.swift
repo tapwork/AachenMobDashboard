@@ -16,9 +16,9 @@ struct ChargeStationsModel {
         let valueDescription: String
         let iotID: Int
         let name: String
-     //   let properties: ValueProperties
-     //   let locations: [Location]
-     //   let datastreams: [Datastream]
+        let properties: ValueProperties
+        let locations: [Location]
+        let datastreams: [Datastream]
         var id: Int {
             iotID
         }
@@ -27,9 +27,9 @@ struct ChargeStationsModel {
             case valueDescription = "description"
             case name
             case iotID = "@iot.id"
-        //    case properties
-        //    case locations = "Locations"
-        //    case datastreams = "Datastreams"
+            case properties
+            case locations = "Locations"
+            case datastreams = "Datastreams"
         }
     }
 
