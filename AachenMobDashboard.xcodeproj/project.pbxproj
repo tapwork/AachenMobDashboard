@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7274D60C27C27AE100ED0A77 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7274D60B27C27AE100ED0A77 /* API.swift */; };
 		729B7C4427C268C300758C6E /* AachenMobDashboardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729B7C4327C268C300758C6E /* AachenMobDashboardApp.swift */; };
 		729B7C4627C268C300758C6E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729B7C4527C268C300758C6E /* ContentView.swift */; };
 		729B7C4827C268C400758C6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 729B7C4727C268C400758C6E /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7274D60B27C27AE100ED0A77 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		729B7C4027C268C300758C6E /* AachenMobDashboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AachenMobDashboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		729B7C4327C268C300758C6E /* AachenMobDashboardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AachenMobDashboardApp.swift; sourceTree = "<group>"; };
 		729B7C4527C268C300758C6E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				729B7C4527C268C300758C6E /* ContentView.swift */,
 				729B7C4727C268C400758C6E /* Assets.xcassets */,
 				729B7C4927C268C400758C6E /* Preview Content */,
+				7274D60B27C27AE100ED0A77 /* API.swift */,
 			);
 			path = AachenMobDashboard;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 				729B7C4627C268C300758C6E /* ContentView.swift in Sources */,
 				729B7C4427C268C300758C6E /* AachenMobDashboardApp.swift in Sources */,
 				729B7C5527C2691C00758C6E /* ChargeStationsAPI.swift in Sources */,
+				7274D60C27C27AE100ED0A77 /* API.swift in Sources */,
 				729B7C5727C26AD000758C6E /* ChargeStationsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
