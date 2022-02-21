@@ -39,7 +39,7 @@ struct ChargeStationsRowView: View {
             ScrollView(.horizontal) {
                 LazyHGrid(rows: columns) {
                     ForEach(properties) {prop in
-                        ChargeStationsRowKWView(power: prop.power, available: prop.isAvailble, type: prop.chargeType, socket: prop.socket)
+                        ChargeStationsSocketView(socket: prop.socket)
                     }
                 }
             }
@@ -47,21 +47,26 @@ struct ChargeStationsRowView: View {
     }
 }
 
-struct ChargeStationsRowKWView: View {
-    let power: Int
-    let available: Bool
-    let type: String
-    let socket: String
+struct ChargeStationsSocketView: View {
+    let socket: ChargeStationsModel.Datastream.Socket
+    var stateColor: Color {
+        switch socket.state {
+        case .available: return .green
+        case .defect: return .red
+        case .charging: return .orange
+        case .unknown: return .gray
+        }
+    }
     var body: some View {
         VStack(alignment: .leading) {
-            Text("\(power) kW")
+            Text("\(socket.power) kW")
             HStack(spacing: 2) {
-                Text(type)
-                Text(socket)
+                Text(socket.type)
+                Text(socket.name)
             }
         }
         .padding(10)
-        .background(available ? .green : .red)
+        .background(stateColor)
         .cornerRadius(10)
         .font(.caption2)
     }

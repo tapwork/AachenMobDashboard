@@ -8,29 +8,36 @@
 import Foundation
 
 extension ChargeStationsModel.Datastream {
-    var isAvailble: Bool {
-        properties.status.chargePointStatusType == .operative &&
-        ((observations.first(where: {$0.result == .available})) != nil)
+
+
+    struct Socket {
+        enum State: String {
+            case available
+            case charging
+            case defect
+            case unknown
+
+            init(observation: ChargeStationsModel.Observation?) {
+                switch observation?.result {
+                case .charging: self = .charging
+                case .available: self = .available
+                case .outoforder: self = .defect
+                case .none: self = .defect
+                }
+            }
+        }
+
+        var state: State
+        var power: Int
+        var type: String
+        var name: String
     }
 
-    var isCharging: Bool {
-        observations.first(where: {$0.result == .charging}) != nil
-    }
-
-    var power: Int {
-        properties.ratings.maximumPower
-    }
-
-    var isDC: Bool {
-        properties.chargePointType == .dc
-    }
-
-    var chargeType: String {
-        properties.chargePointType.rawValue
-    }
-
-    var socket: String {
-        properties.connectors.first?.connectorStandard.connectorStandard.name ?? ""
+    var socket: Socket {
+        Socket(state: .init(observation: observations.first),
+               power: properties.ratings.maximumPower,
+               type: properties.chargePointType.rawValue,
+               name: properties.connectors.first?.connectorStandard.connectorStandard.name ?? "")
     }
 }
 
