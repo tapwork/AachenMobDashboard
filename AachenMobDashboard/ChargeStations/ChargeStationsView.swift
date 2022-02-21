@@ -11,15 +11,12 @@ struct ChargeStationsView: View {
     @StateObject var api = ChargeStationsViewModel()
     var body: some View {
         content
-            .overlay {
-                if api.isFetching { ProgressView() }
-            }
             .task {
                 try? await api.fetch()
             }
             .refreshable {
                 try? await api.fetch()
-            }
+            }.redacted(reason: api.isFetching ? .placeholder : [])
     }
 
     var content: some View {
