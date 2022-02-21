@@ -7,16 +7,12 @@
 
 import Foundation
 
-class ChargeStationsAPI: ObservableObject {
-    @Published var isFetching = false
-    @Published var values = [ChargeStationsModel.Value]()
-    let api = API()
+class ChargeStationsAPI: FetchObservableObject {
 
-    @MainActor
+    @Published var values = [ChargeStationsModel.Value]()
+
     func fetch() async throws {
-        isFetching = true
-        let root: ChargeStationsModel.Root = try await api.request(.chargeStations)
+        let root: ChargeStationsModel.Root = try await fetch(.chargeStations)
         values = root.value
-        isFetching = false
     }
 }
