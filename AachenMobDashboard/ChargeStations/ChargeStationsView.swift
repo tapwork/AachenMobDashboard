@@ -8,21 +8,25 @@
 import SwiftUI
 
 struct ChargeStationsView: View {
-    @StateObject var api = ChargeStationsViewModel()
+    @StateObject var viewModel = ChargeStationsViewModel()
+
     var body: some View {
-        content
+        contentView
             .task {
-                try? await api.fetch()
+                try? await viewModel.fetch()
             }
             .refreshable {
-                try? await api.fetch()
-            }.redacted(reason: api.isFetching ? .placeholder : [])
+                try? await viewModel.fetch()
+            }.redacted(reason: viewModel.isFetching ? .placeholder : [])
     }
 
-    var content: some View {
-        List(api.values) { value in
+    var contentView: some View {
+        List(viewModel.content) { value in
             ChargeStationsRowView(title: value.valueDescription, properties: value.datastreams)
-        }.listStyle(.plain)
+        }
+        .listStyle(.plain)
+        .searchable(text: $viewModel.searchTerm)
+        .navigationTitle("Ladesäulen")
     }
 }
 
@@ -72,6 +76,8 @@ struct ChargeStationsSocketView: View {
 // MARK: - Previews
 struct ChargeStationsView_Previews: PreviewProvider {
     static var previews: some View {
-        ChargeStationsView()
+        NavigationView {
+            ChargeStationsView()
+        }
     }
 }
