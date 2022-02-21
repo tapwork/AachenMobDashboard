@@ -14,8 +14,9 @@
 		729B7C4827C268C400758C6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 729B7C4727C268C400758C6E /* Assets.xcassets */; };
 		729B7C4B27C268C400758C6E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 729B7C4A27C268C400758C6E /* Preview Assets.xcassets */; };
 		729B7C5327C268DA00758C6E /* ChargeStationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729B7C5227C268DA00758C6E /* ChargeStationsModel.swift */; };
-		729B7C5527C2691C00758C6E /* ChargeStationsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729B7C5427C2691C00758C6E /* ChargeStationsAPI.swift */; };
+		729B7C5527C2691C00758C6E /* ChargeStationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729B7C5427C2691C00758C6E /* ChargeStationsViewModel.swift */; };
 		729B7C5727C26AD000758C6E /* ChargeStationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729B7C5627C26AD000758C6E /* ChargeStationsView.swift */; };
+		72DF733D27C3BE0A00C59D88 /* ChargeStationsModel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DF733C27C3BE0A00C59D88 /* ChargeStationsModel+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +28,9 @@
 		729B7C4727C268C400758C6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		729B7C4A27C268C400758C6E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		729B7C5227C268DA00758C6E /* ChargeStationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeStationsModel.swift; sourceTree = "<group>"; };
-		729B7C5427C2691C00758C6E /* ChargeStationsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeStationsAPI.swift; sourceTree = "<group>"; };
+		729B7C5427C2691C00758C6E /* ChargeStationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeStationsViewModel.swift; sourceTree = "<group>"; };
 		729B7C5627C26AD000758C6E /* ChargeStationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeStationsView.swift; sourceTree = "<group>"; };
+		72DF733C27C3BE0A00C59D88 /* ChargeStationsModel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChargeStationsModel+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,8 +94,9 @@
 			isa = PBXGroup;
 			children = (
 				729B7C5227C268DA00758C6E /* ChargeStationsModel.swift */,
-				729B7C5427C2691C00758C6E /* ChargeStationsAPI.swift */,
+				729B7C5427C2691C00758C6E /* ChargeStationsViewModel.swift */,
 				729B7C5627C26AD000758C6E /* ChargeStationsView.swift */,
+				72DF733C27C3BE0A00C59D88 /* ChargeStationsModel+Extension.swift */,
 			);
 			path = ChargeStations;
 			sourceTree = "<group>";
@@ -172,8 +175,9 @@
 				7274D60F27C2ABD900ED0A77 /* FetchObservableObject.swift in Sources */,
 				729B7C4627C268C300758C6E /* ContentView.swift in Sources */,
 				729B7C4427C268C300758C6E /* AachenMobDashboardApp.swift in Sources */,
-				729B7C5527C2691C00758C6E /* ChargeStationsAPI.swift in Sources */,
+				729B7C5527C2691C00758C6E /* ChargeStationsViewModel.swift in Sources */,
 				7274D60C27C27AE100ED0A77 /* API.swift in Sources */,
+				72DF733D27C3BE0A00C59D88 /* ChargeStationsModel+Extension.swift in Sources */,
 				729B7C5727C26AD000758C6E /* ChargeStationsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  ChargeStationsAPI.swift
+//  ChargeStationsViewModel.swift
 //  AachenMobDashboard
 //
 //  Created by Christian Menschel on 20.02.22.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ChargeStationsAPI: FetchObservableObject {
+class ChargeStationsViewModel: FetchObservableObject {
 
     @Published var values = [ChargeStationsModel.Value]()
 

@@ -34,13 +34,16 @@ struct ChargeStationsModel {
     }
 
     // MARK: - Datastream
-    struct Datastream: Codable {
+    struct Datastream: Codable, Identifiable {
         let iotID: Int
         let name: String
         let properties: DatastreamProperties
         let observedProperty: ObservedProperty
         let observationsIotNextLink: String
         let observations: [Observation]
+        var id: Int {
+            iotID
+        }
 
         enum CodingKeys: String, CodingKey {
             case iotID = "@iot.id"
