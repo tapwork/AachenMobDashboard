@@ -7,13 +7,16 @@
 
 import Foundation
 import CoreLocation
-
+import UserNotifications
+import UIKit
+import Combine
 
 class LocationHandler: NSObject {
 
     lazy var locationManager = CLLocationManager()
     var locationUpdater: ((CLLocation) -> Void)?
     var lastLocation: CLLocation?
+    private var subscriptions = [AnyCancellable]()
 
     func start(_ updater: @escaping (CLLocation) -> Void) {
         locationUpdater = updater
@@ -21,6 +24,21 @@ class LocationHandler: NSObject {
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+        addObserver()
+    }
+
+    func addObserver() {
+        NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification, object: nil)
+            .sink {[weak self] _ in
+                guard let self = self else { return }
+                self.locationManager.startUpdatingLocation()
+        }.store(in: &subscriptions)
+
+        NotificationCenter.default.publisher(for: UIApplication.didEnterBackgroundNotification, object: nil)
+            .sink {[weak self] _ in
+                guard let self = self else { return }
+                self.locationManager.stopUpdatingHeading()
+        }.store(in: &subscriptions)
     }
 }
 
