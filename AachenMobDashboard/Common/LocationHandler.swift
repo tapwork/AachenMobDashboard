@@ -35,10 +35,10 @@ extension LocationHandler: CLLocationManagerDelegate {
    // @MainActor
     func update(_ locations:  [CLLocation]) {
         guard let location = locations.sorted(by: {$0.timestamp > $1.timestamp }).first else { return }
+        lastLocation = location
         if lastLocation == nil || isFarEnoughFromLastLocation(location) {
             locationUpdater?(location)
         }
-        lastLocation = location
     }
 
     func isFarEnoughFromLastLocation(_ location: CLLocation) -> Bool {
