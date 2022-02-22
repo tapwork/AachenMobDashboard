@@ -33,6 +33,7 @@
 		729B7C5627C26AD000758C6E /* ChargeStationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeStationsView.swift; sourceTree = "<group>"; };
 		72DF733C27C3BE0A00C59D88 /* ChargeStationsModel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChargeStationsModel+Extension.swift"; sourceTree = "<group>"; };
 		72DF733E27C4C4C400C59D88 /* LocationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHandler.swift; sourceTree = "<group>"; };
+		72DF734027C4D87700C59D88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +76,7 @@
 		729B7C4227C268C300758C6E /* AachenMobDashboard */ = {
 			isa = PBXGroup;
 			children = (
+				72DF734027C4D87700C59D88 /* Info.plist */,
 				7274D60D27C2ABD100ED0A77 /* Common */,
 				729B7C5127C268C900758C6E /* ChargeStations */,
 				729B7C4327C268C300758C6E /* AachenMobDashboardApp.swift */,
@@ -317,6 +319,7 @@
 				DEVELOPMENT_TEAM = D5PCJAP39R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AachenMobDashboard/Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Für die sortierte Anzeige von Orts-Informationen wird dein aktueller Standort benötigt. ";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -349,6 +352,7 @@
 				DEVELOPMENT_TEAM = D5PCJAP39R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AachenMobDashboard/Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Für die sortierte Anzeige von Orts-Informationen wird dein aktueller Standort benötigt. ";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
