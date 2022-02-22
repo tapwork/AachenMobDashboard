@@ -17,6 +17,7 @@
 		729B7C5527C2691C00758C6E /* ChargeStationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729B7C5427C2691C00758C6E /* ChargeStationsViewModel.swift */; };
 		729B7C5727C26AD000758C6E /* ChargeStationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729B7C5627C26AD000758C6E /* ChargeStationsView.swift */; };
 		72DF733D27C3BE0A00C59D88 /* ChargeStationsModel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DF733C27C3BE0A00C59D88 /* ChargeStationsModel+Extension.swift */; };
+		72DF733F27C4C4C400C59D88 /* LocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DF733E27C4C4C400C59D88 /* LocationHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		729B7C5427C2691C00758C6E /* ChargeStationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeStationsViewModel.swift; sourceTree = "<group>"; };
 		729B7C5627C26AD000758C6E /* ChargeStationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeStationsView.swift; sourceTree = "<group>"; };
 		72DF733C27C3BE0A00C59D88 /* ChargeStationsModel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChargeStationsModel+Extension.swift"; sourceTree = "<group>"; };
+		72DF733E27C4C4C400C59D88 /* LocationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +51,7 @@
 			children = (
 				7274D60B27C27AE100ED0A77 /* API.swift */,
 				7274D60E27C2ABD900ED0A77 /* FetchObservableObject.swift */,
+				72DF733E27C4C4C400C59D88 /* LocationHandler.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 				729B7C5327C268DA00758C6E /* ChargeStationsModel.swift in Sources */,
 				7274D60F27C2ABD900ED0A77 /* FetchObservableObject.swift in Sources */,
 				729B7C4627C268C300758C6E /* ContentView.swift in Sources */,
+				72DF733F27C4C4C400C59D88 /* LocationHandler.swift in Sources */,
 				729B7C4427C268C300758C6E /* AachenMobDashboardApp.swift in Sources */,
 				729B7C5527C2691C00758C6E /* ChargeStationsViewModel.swift in Sources */,
 				7274D60C27C27AE100ED0A77 /* API.swift in Sources */,
@@ -306,12 +310,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"AachenMobDashboard/Preview Content\"";
 				DEVELOPMENT_TEAM = D5PCJAP39R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Für die sortierte Anzeige von Orts-Informationen wird dein aktueller Standort benötigt. ";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -322,8 +328,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = de.tapwork.AachenMobDashboard;
+				PRODUCT_BUNDLE_IDENTIFIER = de.tapwork.ios.aachenmobdashboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -335,12 +342,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"AachenMobDashboard/Preview Content\"";
 				DEVELOPMENT_TEAM = D5PCJAP39R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Für die sortierte Anzeige von Orts-Informationen wird dein aktueller Standort benötigt. ";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -351,8 +360,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = de.tapwork.AachenMobDashboard;
+				PRODUCT_BUNDLE_IDENTIFIER = de.tapwork.ios.aachenmobdashboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = AachenMobDashboard;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -6,9 +6,22 @@
 //
 
 import Foundation
+import CoreLocation
+
+extension ChargeStationsModel.Value {
+    var coordinates: CLLocationCoordinate2D? {
+        guard let lat = Double(properties.props.chargePointLocation.lat),
+              let lng = Double(properties.props.chargePointLocation.lon) else { return nil }
+        return CLLocationCoordinate2D(latitude: lat, longitude: lng)
+    }
+
+    func distance(from location: CLLocation) -> Double? {
+        guard let coordinates = coordinates else { return nil }
+        return CLLocation(latitude: coordinates.latitude, longitude: coordinates.longitude).distance(from: location)
+    }
+}
 
 extension ChargeStationsModel.Datastream {
-
 
     struct Socket {
         enum State: String {
