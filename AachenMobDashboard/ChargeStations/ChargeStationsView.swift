@@ -22,7 +22,7 @@ struct ChargeStationsView: View {
 
     var contentView: some View {
         List(viewModel.content) { value in
-            ChargeStationsRowView(title: value.valueDescription, properties: value.datastreams)
+            ChargeStationsRowView(value: value)
         }
         .listStyle(.plain)
         .searchable(text: $viewModel.searchTerm)
@@ -31,8 +31,14 @@ struct ChargeStationsView: View {
 }
 
 struct ChargeStationsRowView: View {
-    let title: String
-    let properties: [ChargeStationsModel.Datastream]
+    @State private var showActionSheet = false
+    let value: ChargeStationsModel.Value
+    var title: String {
+        value.valueDescription
+    }
+    var properties: [ChargeStationsModel.Datastream] {
+        value.datastreams
+    }
     let columns = [GridItem(.adaptive(minimum: 120))]
     var body: some View {
         VStack(alignment: .leading) {
@@ -44,7 +50,26 @@ struct ChargeStationsRowView: View {
                     }
                 }
             }
-        }.padding([.top, .bottom])
+        }
+        .onTapGesture {
+            showActionSheet.toggle()
+        }
+        .padding([.top, .bottom])
+        .actionSheet(isPresented: $showActionSheet) {
+            ActionSheet(
+                title: Text("Navigation"),
+                message: Text("Zur Ladesäule navigieren?"),
+                buttons: [
+                    .default(Text("Google Maps"), action: { open(value.googleMapsURL) }),
+                    .default(Text("Apple Maps"), action: { open(value.appleMapsURL) }),
+                    .cancel(Text("Abbrechen"))
+                ]
+            )
+        }
+    }
+
+    func open(_ url: URL) {
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
 }
 

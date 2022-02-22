@@ -19,6 +19,14 @@ extension ChargeStationsModel.Value {
         guard let coordinates = coordinates else { return nil }
         return CLLocation(latitude: coordinates.latitude, longitude: coordinates.longitude).distance(from: location)
     }
+
+    var appleMapsURL: URL {
+        URL(string: "https://maps.apple.com/?daddr=\(coordinates?.latitude ?? 0.0),\(coordinates?.longitude ?? 0.0)&dirflg=d")!
+    }
+
+    var googleMapsURL: URL {
+        URL(string: "https://www.google.com/maps?saddr=My+Location&daddr=\(coordinates?.latitude ?? 0.0),\(coordinates?.longitude ?? 0.0)")!
+    }
 }
 
 extension ChargeStationsModel.Datastream {
