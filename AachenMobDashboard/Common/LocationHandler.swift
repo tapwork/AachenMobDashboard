@@ -36,13 +36,6 @@ extension LocationHandler: CLLocationManagerDelegate {
     func update(_ locations:  [CLLocation]) {
         guard let location = locations.sorted(by: {$0.timestamp > $1.timestamp }).first else { return }
         lastLocation = location
-        if lastLocation == nil || isFarEnoughFromLastLocation(location) {
-            locationUpdater?(location)
-        }
-    }
-
-    func isFarEnoughFromLastLocation(_ location: CLLocation) -> Bool {
-        let last = lastLocation ?? location
-        return last.distance(from: location) > 1_000
+        locationUpdater?(location)
     }
 }
