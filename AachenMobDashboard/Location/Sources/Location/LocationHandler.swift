@@ -11,14 +11,16 @@ import UserNotifications
 import UIKit
 import Combine
 
-class LocationHandler: NSObject {
+public class LocationHandler: NSObject {
 
     lazy var locationManager = CLLocationManager()
-    var locationUpdater: ((CLLocation) -> Void)?
-    var lastLocation: CLLocation?
+    public var locationUpdater: ((CLLocation) -> Void)?
+    public var lastLocation: CLLocation?
     private var subscriptions = [AnyCancellable]()
 
-    func start(_ updater: @escaping (CLLocation) -> Void) {
+    public override init() {}
+
+    public func start(_ updater: @escaping (CLLocation) -> Void) {
         locationUpdater = updater
         locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
         locationManager.delegate = self
@@ -27,7 +29,7 @@ class LocationHandler: NSObject {
         addObserver()
     }
 
-    func addObserver() {
+    private func addObserver() {
         NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification, object: nil)
             .sink {[weak self] _ in
                 guard let self = self else { return }
@@ -43,14 +45,14 @@ class LocationHandler: NSObject {
 }
 
 extension LocationHandler: CLLocationManagerDelegate {
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         //update(locations)
         DispatchQueue.main.async {
             self.update(locations)
         }
     }
 
-   // @MainActor
+//    @MainActor
     func update(_ locations:  [CLLocation]) {
         guard let location = locations.sorted(by: {$0.timestamp > $1.timestamp }).first else { return }
         lastLocation = location

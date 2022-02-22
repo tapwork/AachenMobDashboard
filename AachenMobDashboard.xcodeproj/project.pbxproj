@@ -7,33 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7274D60C27C27AE100ED0A77 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7274D60B27C27AE100ED0A77 /* API.swift */; };
-		7274D60F27C2ABD900ED0A77 /* FetchObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7274D60E27C2ABD900ED0A77 /* FetchObservableObject.swift */; };
-		729B7C4427C268C300758C6E /* AachenMobDashboardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729B7C4327C268C300758C6E /* AachenMobDashboardApp.swift */; };
-		729B7C4627C268C300758C6E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729B7C4527C268C300758C6E /* ContentView.swift */; };
 		729B7C4827C268C400758C6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 729B7C4727C268C400758C6E /* Assets.xcassets */; };
 		729B7C4B27C268C400758C6E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 729B7C4A27C268C400758C6E /* Preview Assets.xcassets */; };
-		729B7C5327C268DA00758C6E /* ChargeStationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729B7C5227C268DA00758C6E /* ChargeStationsModel.swift */; };
-		729B7C5527C2691C00758C6E /* ChargeStationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729B7C5427C2691C00758C6E /* ChargeStationsViewModel.swift */; };
-		729B7C5727C26AD000758C6E /* ChargeStationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729B7C5627C26AD000758C6E /* ChargeStationsView.swift */; };
-		72DF733D27C3BE0A00C59D88 /* ChargeStationsModel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DF733C27C3BE0A00C59D88 /* ChargeStationsModel+Extension.swift */; };
-		72DF733F27C4C4C400C59D88 /* LocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DF733E27C4C4C400C59D88 /* LocationHandler.swift */; };
+		72E1315727C554E7003C81C4 /* AachenMobDashboardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1315627C554E7003C81C4 /* AachenMobDashboardApp.swift */; };
+		72E1317027C5568F003C81C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E1316E27C5568F003C81C4 /* ContentView.swift */; };
+		72E1317427C556C4003C81C4 /* ChargeStations in Frameworks */ = {isa = PBXBuildFile; productRef = 72E1317327C556C4003C81C4 /* ChargeStations */; };
+		72E1317627C556C7003C81C4 /* Location in Frameworks */ = {isa = PBXBuildFile; productRef = 72E1317527C556C7003C81C4 /* Location */; };
+		72E1317A27C557D1003C81C4 /* API in Frameworks */ = {isa = PBXBuildFile; productRef = 72E1317927C557D1003C81C4 /* API */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7274D60B27C27AE100ED0A77 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		7274D60E27C2ABD900ED0A77 /* FetchObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchObservableObject.swift; sourceTree = "<group>"; };
 		729B7C4027C268C300758C6E /* AachenMobDashboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AachenMobDashboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		729B7C4327C268C300758C6E /* AachenMobDashboardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AachenMobDashboardApp.swift; sourceTree = "<group>"; };
-		729B7C4527C268C300758C6E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		729B7C4727C268C400758C6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		729B7C4A27C268C400758C6E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		729B7C5227C268DA00758C6E /* ChargeStationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeStationsModel.swift; sourceTree = "<group>"; };
-		729B7C5427C2691C00758C6E /* ChargeStationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeStationsViewModel.swift; sourceTree = "<group>"; };
-		729B7C5627C26AD000758C6E /* ChargeStationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeStationsView.swift; sourceTree = "<group>"; };
-		72DF733C27C3BE0A00C59D88 /* ChargeStationsModel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChargeStationsModel+Extension.swift"; sourceTree = "<group>"; };
-		72DF733E27C4C4C400C59D88 /* LocationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHandler.swift; sourceTree = "<group>"; };
 		72DF734027C4D87700C59D88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		72E1315627C554E7003C81C4 /* AachenMobDashboardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AachenMobDashboardApp.swift; sourceTree = "<group>"; };
+		72E1316527C55583003C81C4 /* API */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = API; path = AachenMobDashboard/API; sourceTree = "<group>"; };
+		72E1316927C555D0003C81C4 /* Location */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Location; path = AachenMobDashboard/Location; sourceTree = "<group>"; };
+		72E1316A27C555DB003C81C4 /* ChargeStations */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ChargeStations; path = AachenMobDashboard/Domains/ChargeStations; sourceTree = "<group>"; };
+		72E1316E27C5568F003C81C4 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,27 +33,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72E1317A27C557D1003C81C4 /* API in Frameworks */,
+				72E1317427C556C4003C81C4 /* ChargeStations in Frameworks */,
+				72E1317627C556C7003C81C4 /* Location in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7274D60D27C2ABD100ED0A77 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				7274D60B27C27AE100ED0A77 /* API.swift */,
-				7274D60E27C2ABD900ED0A77 /* FetchObservableObject.swift */,
-				72DF733E27C4C4C400C59D88 /* LocationHandler.swift */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
 		729B7C3727C268C300758C6E = {
 			isa = PBXGroup;
 			children = (
+				72E1316327C55536003C81C4 /* Packages */,
 				729B7C4227C268C300758C6E /* AachenMobDashboard */,
 				729B7C4127C268C300758C6E /* Products */,
+				72E1315827C55515003C81C4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,11 +63,9 @@
 		729B7C4227C268C300758C6E /* AachenMobDashboard */ = {
 			isa = PBXGroup;
 			children = (
+				72E1316D27C5568F003C81C4 /* CoreView */,
 				72DF734027C4D87700C59D88 /* Info.plist */,
-				7274D60D27C2ABD100ED0A77 /* Common */,
-				729B7C5127C268C900758C6E /* ChargeStations */,
-				729B7C4327C268C300758C6E /* AachenMobDashboardApp.swift */,
-				729B7C4527C268C300758C6E /* ContentView.swift */,
+				72E1315627C554E7003C81C4 /* AachenMobDashboardApp.swift */,
 				729B7C4727C268C400758C6E /* Assets.xcassets */,
 				729B7C4927C268C400758C6E /* Preview Content */,
 			);
@@ -95,15 +80,29 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		729B7C5127C268C900758C6E /* ChargeStations */ = {
+		72E1315827C55515003C81C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				729B7C5227C268DA00758C6E /* ChargeStationsModel.swift */,
-				729B7C5427C2691C00758C6E /* ChargeStationsViewModel.swift */,
-				729B7C5627C26AD000758C6E /* ChargeStationsView.swift */,
-				72DF733C27C3BE0A00C59D88 /* ChargeStationsModel+Extension.swift */,
 			);
-			path = ChargeStations;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		72E1316327C55536003C81C4 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				72E1316527C55583003C81C4 /* API */,
+				72E1316927C555D0003C81C4 /* Location */,
+				72E1316A27C555DB003C81C4 /* ChargeStations */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		72E1316D27C5568F003C81C4 /* CoreView */ = {
+			isa = PBXGroup;
+			children = (
+				72E1316E27C5568F003C81C4 /* ContentView.swift */,
+			);
+			path = CoreView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,6 +121,11 @@
 			dependencies = (
 			);
 			name = AachenMobDashboard;
+			packageProductDependencies = (
+				72E1317327C556C4003C81C4 /* ChargeStations */,
+				72E1317527C556C7003C81C4 /* Location */,
+				72E1317927C557D1003C81C4 /* API */,
+			);
 			productName = AachenMobDashboard;
 			productReference = 729B7C4027C268C300758C6E /* AachenMobDashboard.app */;
 			productType = "com.apple.product-type.application";
@@ -176,15 +180,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				729B7C5327C268DA00758C6E /* ChargeStationsModel.swift in Sources */,
-				7274D60F27C2ABD900ED0A77 /* FetchObservableObject.swift in Sources */,
-				729B7C4627C268C300758C6E /* ContentView.swift in Sources */,
-				72DF733F27C4C4C400C59D88 /* LocationHandler.swift in Sources */,
-				729B7C4427C268C300758C6E /* AachenMobDashboardApp.swift in Sources */,
-				729B7C5527C2691C00758C6E /* ChargeStationsViewModel.swift in Sources */,
-				7274D60C27C27AE100ED0A77 /* API.swift in Sources */,
-				72DF733D27C3BE0A00C59D88 /* ChargeStationsModel+Extension.swift in Sources */,
-				729B7C5727C26AD000758C6E /* ChargeStationsView.swift in Sources */,
+				72E1315727C554E7003C81C4 /* AachenMobDashboardApp.swift in Sources */,
+				72E1317027C5568F003C81C4 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +392,21 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		72E1317327C556C4003C81C4 /* ChargeStations */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ChargeStations;
+		};
+		72E1317527C556C7003C81C4 /* Location */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Location;
+		};
+		72E1317927C557D1003C81C4 /* API */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = API;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 729B7C3827C268C300758C6E /* Project object */;
 }

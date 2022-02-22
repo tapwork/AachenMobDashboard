@@ -7,20 +7,22 @@
 
 import SwiftUI
 
-struct ChargeStationsView: View {
+public struct ChargeStationsView: View {
     @StateObject var viewModel = ChargeStationsViewModel()
 
-    var body: some View {
+    public init() {}
+
+    public var body: some View {
         contentView
             .task {
                 try? await viewModel.fetch()
             }
             .refreshable {
                 try? await viewModel.fetch()
-            }.redacted(reason: viewModel.isFetching ? .placeholder : [])
+            }.redacted(reason: viewModel.values.isEmpty ? .placeholder : [])
     }
 
-    var contentView: some View {
+    public var contentView: some View {
         List(viewModel.content) { value in
             ChargeStationsRowView(value: value)
         }

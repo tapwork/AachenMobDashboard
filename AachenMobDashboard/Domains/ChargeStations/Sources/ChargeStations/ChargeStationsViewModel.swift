@@ -7,15 +7,17 @@
 
 import Foundation
 import UIKit
+import API
+import Location
 
-class ChargeStationsViewModel: FetchObservableObject {
+class ChargeStationsViewModel: ObservableObject {
 
     @Published var values = [ChargeStationsModel.Value]()
     @Published var searchTerm = ""
     private let locationHandler = LocationHandler()
+    private let api = API()
 
-    override init() {
-        super.init()
+    init() {
         locationHandler.start {[weak self] location in
             guard let self = self else { return }
             self.sortValues()
@@ -30,8 +32,9 @@ class ChargeStationsViewModel: FetchObservableObject {
         }
     }
 
+    @MainActor
     func fetch() async throws {
-        let root: ChargeStationsModel.Root = try await fetch(.chargeStations)
+        let root: ChargeStationsModel.Root = try await api.request(URL.chargeStationsAPI)
         values = sortedValues(root.value)
     }
 
