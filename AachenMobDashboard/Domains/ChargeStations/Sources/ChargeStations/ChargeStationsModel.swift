@@ -39,7 +39,7 @@ struct ChargeStationsModel {
         let name: String
         let properties: DatastreamProperties
         let observedProperty: ObservedProperty
-        let observationsIotNextLink: String
+        let observationsIotNextLink: String?
         let observations: [Observation]
         var id: Int {
             iotID
