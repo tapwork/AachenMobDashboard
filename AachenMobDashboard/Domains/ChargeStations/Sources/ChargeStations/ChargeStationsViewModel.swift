@@ -14,8 +14,9 @@ class ChargeStationsViewModel: ObservableObject {
 
     @Published var values = [ChargeStationsModel.Value]()
     @Published var searchTerm = ""
+    @Published var isFetching = false
     private let locationHandler = LocationHandler()
-    private let api = API()
+    let api = API()
 
     init() {
         locationHandler.start {[weak self] location in
@@ -33,9 +34,15 @@ class ChargeStationsViewModel: ObservableObject {
     }
 
     @MainActor
-    func fetch() async throws {
-        let root: ChargeStationsModel.Root = try await api.request(URL.chargeStationsAPI)
-        values = sortedValues(root.value)
+    func fetch() async {
+        isFetching = true
+        do {
+            let root: ChargeStationsModel.Root = try await api.request(URL.chargeStationsAPI)
+            values = sortedValues(root.value)
+        } catch {
+            print(error)
+        }
+        isFetching = false
     }
 
     func sortValues() {

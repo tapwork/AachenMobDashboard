@@ -58,7 +58,13 @@ extension ChargeStationsModel.Datastream {
         Socket(state: .init(observation: observations.first),
                power: properties.ratings.maximumPower,
                type: properties.chargePointType.rawValue,
-               name: properties.connectors.first?.connectorStandard.connectorStandard.name ?? "")
+               name: properties.connectors.combinedNames)
+    }
+}
+
+extension Array where Element == ChargeStationsModel.Connector {
+    var combinedNames: String {
+        map { $0.connectorStandard.connectorStandard.name }.joined(separator: ", ")
     }
 }
 

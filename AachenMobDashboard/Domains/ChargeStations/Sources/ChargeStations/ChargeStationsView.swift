@@ -15,11 +15,11 @@ public struct ChargeStationsView: View {
     public var body: some View {
         contentView
             .task {
-                try? await viewModel.fetch()
+                await viewModel.fetch()
             }
             .refreshable {
-                try? await viewModel.fetch()
-            }.redacted(reason: viewModel.values.isEmpty ? .placeholder : [])
+                await viewModel.fetch()
+            }.redacted(reason: viewModel.isFetching ? .placeholder : [])
     }
 
     public var contentView: some View {
