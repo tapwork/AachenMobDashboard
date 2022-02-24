@@ -7,7 +7,6 @@
 
 import Foundation
 import CoreLocation
-import UserNotifications
 import UIKit
 import Combine
 
