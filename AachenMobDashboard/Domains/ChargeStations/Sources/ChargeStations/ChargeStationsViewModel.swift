@@ -23,13 +23,19 @@ class ChargeStationsViewModel: ObservableObject {
             guard let self = self else { return }
             self.sortValues()
         }
+        NotificationCenter.default.addObserver(forName: UIApplication.willEnterForegroundNotification, object: nil, queue: nil) {[weak self] _ in
+            guard let self = self else { return }
+            Task {
+                await self.fetch()
+            }
+        }
     }
 
     var content: [ChargeStationsModel.Value] {
         if searchTerm.count < 2 {
             return values
         } else {
-            return values.filter {$0.valueDescription.contains(searchTerm)}
+            return values.filter {$0 .valueDescription.lowercased().contains(searchTerm.lowercased())}
         }
     }
 
